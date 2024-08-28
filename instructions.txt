@@ -1,0 +1,36 @@
+How i approached solution ?
+
+- i have created 4 python files:
+    (a) extract articles from given urls in 'Input.xlsx'
+    - i have used BeautifulSoup library for scraping the content of given urls
+    - extracted content i have saved in 'URL_Content' folder
+
+    (b) remove stopwords from extracted articles
+    - remove stopwords given in 'StopWords' folder
+    - save this cleaned content in 'Cleaned_URL_Content' folder
+
+    (c) create dictionary
+    - create dictionary of positive and negative words from 'MasterDictionary' folder words
+    - saved this dictionary in 'Dictionary.json' file
+
+    (d) analyze variables
+    - analyze all variables given in 'Output Data Structure.xlsx' file
+    - save this analyzed variable in 'Output Data Structure.xlsx' file itself
+
+How to run the .py file to generate output :
+    
+    1. first create environment using following command :
+        >> conda create -p "{path to the current directory}\venv"
+
+    2. activate environment using following command :
+        >> conda activate "{path to the current directory}\venv"
+
+    3. install requirements.txt packages using following command:
+        >> pip install -r requirements.txt
+
+    4. run main.py file using following command:
+        >> python main.py
+
+I have included all dependencies in requirements.py
+
+Note :- In the 'Output Data Structure.xlsx' file, I have blanked the rows where the article is removed or not found at the URL.
